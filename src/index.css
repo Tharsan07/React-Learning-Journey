@@ -1,0 +1,18 @@
+.courseCard{
+  background-color: beige;
+  max-width: 200px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: sans-serif;
+  margin: 10px;
+  padding: 2px;
+  display: inline-block;
+}
+.courseCard img{
+  width: 200px;
+}
+
+.buyButton{
+  text-align: center;
+  align-content: center;
+}
