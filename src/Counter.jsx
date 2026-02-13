@@ -1,46 +1,57 @@
 import React, { useEffect, useState } from "react";
-import '../src/Counter.css'
+import "../src/Counter.css";
+import axios from "axios";
 
-function Counter(){
-    const [count,setCount]=useState(0);
-    const [color,setColor]=useState('green')
+// useEffect(()=>{},[count])
+// useEffect(()=>{},[])
+// useEffect(()=>{})
+function Counter() {
+  const [count, setCount] = useState(0);
+  const [color, setColor] = useState("green");
 
-    useEffect(()=>{
-        document.title=`Count:${count}`
-    })
+  useEffect(() => {
+    document.title = `Count:${count}`;
+  }, [count]);
 
-    const handleAdd = ()=>{
-        setCount(count+1);
-    }
-
-     const handleSubract = ()=>{
-        setCount(count-1);
-    }
-
-    const handleReset=()=>{
-        setCount(0)
-    }
-
-    const handleColor=()=>{
-            setColor(
-                color=='green'?'red':'green'
-            )
-    }
-
-    return(
-       <>
-       <div className="container">
-        <p style={{color}}>Count :{count}</p>
-       <button onClick={handleAdd}>Add</button>
-       <button onClick={handleSubract}>Subract</button>
-       <button onClick={handleReset}>Reset</button><br/>
-       <button onClick={handleColor}>Color Change</button>
-       </div>
-
-       
-
-       </>
-
+  const result = async () => {
+    const response = await axios.get(
+      "https://jsonplaceholder.typicode.com/todos/1",
     );
+    console.log(response);
+    return response.data;
+  };
+
+  result();
+
+  // useEffect(()=>{console.log("Rendering")},[])
+  // useEffect(()=>{console.log("Rendering based on count")},[count])
+  const handleAdd = () => {
+    setCount(count + 1);
+  };
+
+  const handleSubract = () => {
+    setCount(count - 1);
+  };
+
+  const handleReset = () => {
+    setCount(0);
+  };
+
+  const handleColor = () => {
+    setColor(color == "green" ? "red" : "green");
+  };
+
+  return (
+    <>
+      <div className="container">
+        <p style={{ color }}>Count :{count}</p>
+        <button onClick={handleAdd}>Add</button>
+        <button onClick={handleSubract}>Subract</button>
+        <button onClick={handleReset}>Reset</button>
+        <br />
+        <button onClick={handleColor}>Color Change</button>
+      </div>
+    </>
+  );
 }
 export default Counter;
