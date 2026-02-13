@@ -18,3 +18,6 @@ This repo contains my hands-on practice while learning React.js.
 - useState Hook
 - Counter Program using useState
 - Counter Program and color change using useEffect
+- Fetch API data
+- Error Handling
+- Loading page
