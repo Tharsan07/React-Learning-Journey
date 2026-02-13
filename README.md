@@ -17,3 +17,4 @@ This repo contains my hands-on practice while learning React.js.
 - onClick handler
 - useState Hook
 - Counter Program using useState
+- Counter Program and color change using useEffect
