@@ -1,4 +1,3 @@
-import React from 'react';
 import Course from './Course'; // assuming component exists
 import PropTypes from 'prop-types';
 

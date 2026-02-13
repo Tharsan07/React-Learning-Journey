@@ -1,3 +1,4 @@
+import Counter from './Counter';
 import Course from './Course';
 import CoursesList from './CoursesList';
 import EventHandle from './EventHandle';
@@ -8,11 +9,12 @@ function App() {
     <>
       {/* <Course  price="$200" rating="Five Star" hide={true}/>
       <Course name= {true} price="$250"hide={true}/>
-      <Course name="JS" price="$400"/>  
-      <CoursesList/>
-      <Course/> */}
+      <Course name="JS" price="$400"/>   */}
+      {/* <CoursesList/> */}
+      {/* <Course/> */}
         
-        <CounterProgram/>
+        {/* <CounterProgram/> */}
+        <Counter/>
 
       
     </>
