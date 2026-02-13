@@ -4,6 +4,7 @@ import CoursesList from './CoursesList';
 import EventHandle from './EventHandle';
 
 import CounterProgram from './counterProgram';
+import FetchAPI from './fetchAPI';
 function App() {
   return (
     <>
@@ -14,7 +15,8 @@ function App() {
       {/* <Course/> */}
         
         {/* <CounterProgram/> */}
-        <Counter/>
+        {/* <Counter/> */}
+        <FetchAPI/>
 
       
     </>
